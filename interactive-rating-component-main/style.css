@@ -1,0 +1,193 @@
+/* 基本樣式重置和字體設置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216, 12%, 8%);
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 412px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* 卡片基本樣式 */
+.card {
+  width: 100%;
+  padding: 1.8rem;
+  border-radius: 16px;
+  background-color: hsl(213, 19%, 18%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 星星圖標樣式 */
+.star-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 23%);
+  margin-bottom: 1.5rem;
+}
+
+.star-icon img {
+  width: 14px;
+  height: 14px;
+}
+
+/* 標題和文字樣式 */
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+p {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* 評分按鈕樣式 */
+.rating-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.rating-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(213, 19%, 23%);
+  color: hsl(217, 12%, 63%);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.rating-btn:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.rating-btn.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+/* 提交按鈕樣式 */
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 30px;
+  border: none;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
+
+/* 感謝卡片樣式 */
+.thank-you-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you-img {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.result-text {
+  background-color: hsl(213, 19%, 23%);
+  color: hsl(25, 97%, 53%);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 隱藏卡片 */
+.hidden {
+  display: none;
+}
+
+/* 初始時隱藏感謝卡片 */
+.thank-you-card {
+  display: none;
+}
+
+/* 顯示感謝卡片 (當添加了.hidden類到評分卡片時) */
+.rating-card.hidden + .thank-you-card {
+  display: flex;
+}
+
+/* 頁腳樣式 */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+  color: hsl(217, 12%, 63%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 70%);
+  text-decoration: none;
+}
+
+/* 響應式設計 */
+@media (max-width: 375px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .rating-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
